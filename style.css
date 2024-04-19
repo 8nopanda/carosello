@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #221f1f;
+  color: #f5f5f1;
+}
+
+nav {
+  background-color: rgb(43, 43, 43);
+  display: flex;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+  border-radius: 0.3rem;
+}
+
+nav svg {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 1.2rem;
+  list-style-type: none;
+}
+
+/* carosello */
+.carosello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.buttonCarosello {
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 100%;
+  background-color: grey;
+  border: 1px solid grey;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.cardFilm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.infoBrevi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.attoriList {
+  display: flex;
+  gap: 0.4rem;
+  list-style-type: none;
+}
