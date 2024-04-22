@@ -21,7 +21,7 @@ const URLS_API = [
 let dataFilm = [];
 let i = 0;
 
-const nextImage = () => {
+let nextImage = () => {
   i++;
   if (i > 2) {
     i = 0;
@@ -31,7 +31,7 @@ const nextImage = () => {
   console.log(i);
 };
 
-const prevImage = () => {
+let prevImage = () => {
   i--;
   if (i < 0) {
     i = 2;
@@ -66,3 +66,17 @@ const popolaCarosello = (film) => {
 
 console.log(i);
 console.log("prova");
+
+btnNext.addEventListener("click", nextFilm);
+function nextFilm() {
+  if (film[i] < 2) {
+    i++;
+  }
+}
+
+btnNext.addEventListener("click", nextFilm);
+function prevFilm() {
+  if (film[i] > 0) {
+    i--;
+  }
+}
