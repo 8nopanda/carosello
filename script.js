@@ -65,3 +65,4 @@ const popolaCarosello = (film) => {
 };
 
 console.log(i);
+console.log("prova");
