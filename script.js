@@ -67,6 +67,7 @@ const popolaCarosello = (film) => {
 console.log(i);
 console.log("prova");
 
+/*
 btnNext.addEventListener("click", nextFilm);
 function nextFilm() {
   if (film[i] < 2) {
@@ -80,3 +81,4 @@ function prevFilm() {
     i--;
   }
 }
+*/
