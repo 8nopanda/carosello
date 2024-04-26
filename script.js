@@ -33,17 +33,14 @@ const popolaCarosello = () => {
   titoloFilm.textContent = dataFilm[i].Title;
   immagineCarosello.src = dataFilm[i].Poster;
   primoAttore.textContent = actorArray[0];
-  primoAttore.href = `https://en.wikipedia.org/wiki/${
-    actorArray[0].split(" ")[0]
-  }_${actorArray[0].split(" ")[1]}`;
+  primoAttore.href = `https://en.wikipedia.org/wiki/${actorArray[0].split(" ")[0]
+    }_${actorArray[0].split(" ")[1]}`;
   secondoAttore.textContent = actorArray[1];
-  secondoAttore.href = `https://en.wikipedia.org/wiki/${
-    actorArray[1].split(" ")[0]
-  }_${actorArray[1].split(" ")[1]}`;
+  secondoAttore.href = `https://en.wikipedia.org/wiki/${actorArray[1].split(" ")[0]
+    }_${actorArray[1].split(" ")[1]}`;
   terzoAttore.textContent = actorArray[2];
-  terzoAttore.href = `https://en.wikipedia.org/wiki/${
-    actorArray[2].split(" ")[0]
-  }_${actorArray[2].split(" ")[1]}`;
+  terzoAttore.href = `https://en.wikipedia.org/wiki/${actorArray[2].split(" ")[0]
+    }_${actorArray[2].split(" ")[1]}`;
   durataFilm.textContent = `${dataFilm[i].Runtime.split(" ")[0]} minuti`;
   annoUscita.textContent = dataFilm[i].Year;
   genereFilm.textContent = dataFilm[i].Genre;
@@ -76,15 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 formCercaFilm.addEventListener("click", (e) => {
   e.preventDefault();
   fetch(`https://www.omdbapi.com/?t=${inputCerca.value}&apikey=4214e970`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       tramaFilm.textContent = data.Plot;
       immagineCercata.src = data.Poster;
       titoloCerca.textContent = data.Title;
       tramaTitolo.style.display = "block";
     });
 });
+
+let btnMenu = document.querySelector("#btnMenu");
+let navbar = document.querySelector(".navbar");
+function switchMenu() {
+  navbar.classList.toggle("show");
+}
+btnMenu.addEventListener('click', switchMenu);

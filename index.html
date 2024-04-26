@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cinema</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinema</title>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <body>
-    <!-- Realizzare l'homepage del sito di un cinema.
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Realizzare l'homepage del sito di un cinema.
     Questo deve contenere:
     - un menu di navigazione (responsive)
     - un carosello che riporti le informazioni di un film in ogni card (3 film):
@@ -47,77 +41,75 @@ L'aspetto della pagina deve essere curato, senza Bootstrap, Non uguale all'esemp
 Il titolo dei film e i nomi degli attori devono diventare dei link alla pagina corrispondente di Wikipedia.
 -->
 
-    <header>
-      <nav>
-        <div class="logoContainer">
-          <span class="material-symbols-outlined"> explosion </span>
-          <h2 class="logo">GENE<span class="secondLogo">Flix</span></h2>
-        </div>
-        <ul class="navbar">
-          <li>Chi siamo</li>
-          <li>Prenota</li>
-          <li>Offerte</li>
-          <li>Contatti</li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logoContainer">
+        <span class="material-symbols-outlined"> explosion </span>
+        <h2 class="logo">GENE<span class="secondLogo">Flix</span></h2>
+      </div>
+      <button id="btnMenu" class="fa-solid fa-bars hamburger"></button>
+      <ul class="navbar">
+        <li>Chi siamo</li>
+        <li>Prenota</li>
+        <li>Offerte</li>
+        <li>Contatti</li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <section class="primaSezione">
-        <div class="carosello">
-          <button id="btnPrev" class="buttonCarosello">
-            <i class="fas fa-arrow-left"></i>
-          </button>
-          <div class="cardFilm">
-            <h3 class="titoloFilm"></h3>
-            <img src="" alt="locandina" class="immagineCarosello" />
-            <div class="infoBrevi">
-              <ul class="attoriList">
-                <li><a id="primoAttore" href=""></a></li>
-                <li><a id="secondoAttore" href=""></a></li>
-                <li><a id="terzoAttore" href=""></a></li>
-              </ul>
-              <p>Durata film: <span id="durataFilm"></span></p>
-              <p>Anno di uscita: <span id="annoUscita"></span></p>
-              <p>Genere: <span id="genereFilm"></span></p>
-            </div>
-          </div>
-
-          <button id="btnNext" class="buttonCarosello">
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </div>
-      </section>
-
-      <hr />
-
-      <section class="infoAggiuntive">
-        <div class="infoSecUno">
-          <h3>Cerca un film</h3>
-          <form class="formCercaFilm">
-            <input
-              type="text"
-              placeholder="Inserisci titolo"
-              class="inputCerca"
-            />
-            <button class="btnCerca" type="submit">Cerca</button>
-          </form>
-
-          <div class="tramaContainer">
-            <h4 class="tramaTitolo">Trama:</h4>
-            <p class="tramaFilm"></p>
+  <main>
+    <section class="primaSezione">
+      <div class="carosello">
+        <button id="btnPrev" class="buttonCarosello">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="cardFilm">
+          <h3 class="titoloFilm"></h3>
+          <img src="" alt="locandina" class="immagineCarosello" />
+          <div class="infoBrevi">
+            <ul class="attoriList">
+              <li><a target="_blank" id="primoAttore" href=""></a></li>
+              <li><a target="_blank" id="secondoAttore" href=""></a></li>
+              <li><a target="_blank" id="terzoAttore" href=""></a></li>
+            </ul>
+            <p>Durata film: <span id="durataFilm"></span></p>
+            <p>Anno di uscita: <span id="annoUscita"></span></p>
+            <p>Genere: <span id="genereFilm"></span></p>
           </div>
         </div>
 
-        <div class="infoSecDue">
-          <h4 id="titoloCerca"></h4>
-          <img src="" alt="" class="immagineCercata" />
+        <button id="btnNext" class="buttonCarosello">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="infoAggiuntive">
+      <div class="infoSecUno">
+        <h3>Cerca un film</h3>
+        <form class="formCercaFilm">
+          <input type="text" placeholder="Inserisci titolo" class="inputCerca" />
+          <button class="btnCerca" type="submit">Cerca</button>
+        </form>
+
+        <div class="tramaContainer">
+          <h4 class="tramaTitolo"></h4>
+          <p class="tramaFilm"></p>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <footer></footer>
+      <div class="infoSecDue">
+        <h4 id="titoloCerca"></h4>
+        <img src="" alt="" class="immagineCercata" />
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer></footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
